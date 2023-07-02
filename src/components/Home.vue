@@ -1,8 +1,32 @@
+<script>
+import { ref } from "vue";
+import { useElementVisibility } from "@vueuse/core";
+
+export default {
+  setup() {
+    const target = ref(null);
+    const targetIsVisible = useElementVisibility(target);
+
+    return {
+      target,
+      targetIsVisible,
+    };
+  },
+  watch : {
+    targetIsVisible(value) {
+      this.$store.commit('toggleVisibility', value);
+    }
+  }
+};
+</script>
+
 <template>
-  <v-container>
+  <v-container id="home">
     <v-col class="d-flex justify-center align-top">
       <div class="pr-12 pt-12">
-        <h1 class="text-h3 font-weight-bold">Hi! I'm Gerald! &#128516;</h1>
+        <h1 ref="target" class="text-h3 font-weight-bold">
+          Hi! I'm Gerald! &#128516;
+        </h1>
         <h3 class="pt-1">Penultimate Year Student @NUS</h3>
         <p class="pt-4">
           Creating impact with data, visualisations and machine learning.
@@ -36,6 +60,17 @@
       ></v-img>
     </v-col>
   </v-container>
+  <v-expand-transition>
+    <v-btn
+      v-show="!$store.state.visible"
+      color="primary"
+      id="btn-location"
+      round
+      icon="mdi-chevron-up"
+      @click="this.$router.push('#home')"
+      ><v-icon icon="mdi-chevron-up"></v-icon
+    ></v-btn>
+  </v-expand-transition>
 </template>
 
 <style>
@@ -45,5 +80,13 @@
 
 .linkedin {
   color: #0077b5;
+}
+
+#btn-location {
+  position: fixed;
+  display: block;
+  bottom: 7%;
+  right: 3%;
+  z-index: 1;
 }
 </style>

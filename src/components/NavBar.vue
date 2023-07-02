@@ -4,13 +4,10 @@ import { useTheme } from "vuetify";
 export default {
   setup() {
     const theme = useTheme();
-
     return {
       theme,
     };
   },
-  // Vue Store for light mode and darkmode
-  // vue router using the components to achieve highlighting
 
   data() {
     return {
@@ -22,6 +19,15 @@ export default {
       this.$store.commit("toggleTheme");
       this.theme.global.name.value = this.$store.state.theme;
       this.isDarkMode = !this.isDarkMode;
+    },
+    goToHome() {
+      this.$router.push("#home");
+    },
+    goToAbout() {
+      this.$router.push("#about");
+    },
+    goToSkills() {
+      this.$router.push("#skills");
     },
   },
 };
@@ -35,27 +41,23 @@ export default {
     <v-container grid-list-md class="d-flex justify-center">
       <v-btn
         :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
-        href="#home"
+        @click="goToHome"
         >Home</v-btn
       >
       <v-btn
         :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
-        href="#about"
+        @click="goToAbout"
         >About</v-btn
       >
       <v-btn
         :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
-        href="#skills"
+        @click="goToSkills"
         >Skills</v-btn
       >
-      <v-btn
-        :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
-        class="text-decoration-underline"
+      <v-btn :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
         >Projects</v-btn
       >
-      <v-btn
-        :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
-        href="#contact"
+      <v-btn :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
         >Contact</v-btn
       >
     </v-container>

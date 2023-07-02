@@ -1,4 +1,4 @@
-<script>
+<script defer>
 export default {
   data() {
     return {
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <div class="text-h5 text-center font-weight-bold mt-16">
+  <div class="text-h5 text-center font-weight-bold mt-16" id="skills">
     Skills
     <p class="text-subtitle-2">Proficiencies and Abilities</p>
   </div>
@@ -36,7 +36,13 @@ export default {
           <v-card-subtitle>Programming Languages</v-card-subtitle>
 
           <v-card-actions>
-            <v-btn color="orange-lighten-2" variant="text"> Explore </v-btn>
+            <v-btn
+              color="primary"
+              variant="text"
+              @click="showProgramming = true"
+            >
+              View skills
+            </v-btn>
             <v-spacer></v-spacer>
             <v-btn
               :icon="showProgramming ? 'mdi-chevron-up' : 'mdi-chevron-down'"
@@ -76,7 +82,13 @@ export default {
           <v-card-subtitle>Frontend and Backend</v-card-subtitle>
 
           <v-card-actions>
-            <v-btn color="orange-lighten-2" variant="text"> Explore </v-btn>
+            <v-btn
+              color="orange-lighten-2"
+              variant="text"
+              @click="showSoftware = true"
+            >
+              View skills
+            </v-btn>
             <v-spacer></v-spacer>
             <v-btn
               :icon="showSoftware ? 'mdi-chevron-up' : 'mdi-chevron-down'"
@@ -121,7 +133,13 @@ export default {
           <v-card-subtitle>Descriptive Analytics</v-card-subtitle>
 
           <v-card-actions>
-            <v-btn color="orange-lighten-2" variant="text"> Explore </v-btn>
+            <v-btn
+              color="orange-lighten-2"
+              variant="text"
+              @click="showData = true"
+            >
+              view skills
+            </v-btn>
             <v-spacer></v-spacer>
             <v-btn
               :icon="showData ? 'mdi-chevron-up' : 'mdi-chevron-down'"
@@ -159,7 +177,13 @@ export default {
           <v-card-subtitle>Predictive Analytics</v-card-subtitle>
 
           <v-card-actions>
-            <v-btn color="orange-lighten-2" variant="text"> Explore </v-btn>
+            <v-btn
+              color="primary"
+              variant="text"
+              @click="showML = true"
+            >
+              view skills
+            </v-btn>
             <v-spacer></v-spacer>
             <v-btn
               :icon="showML ? 'mdi-chevron-up' : 'mdi-chevron-down'"
