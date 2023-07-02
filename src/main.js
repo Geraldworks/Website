@@ -1,11 +1,23 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 
+// Vuex
+import store from "./store";
+
 // Vuetify
 import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
+
+// Vuetify Themes
+const lightTheme = {
+  dark: false,
+  colors: {
+    background: "#F4F5FA",
+    surface: "#FFFFFF",
+  },
+};
 
 // Material Design Icons
 import "@mdi/font/css/materialdesignicons.css";
@@ -16,5 +28,12 @@ const vuetify = createVuetify({
   icons: {
     defaultSet: "mdi",
   },
+  theme: {
+    defaultTheme: store.state.theme,
+    themes: {
+      lightTheme,
+    },
+  },
 });
-createApp(App).use(vuetify).mount("#app");
+
+createApp(App).use(vuetify).use(store).mount("#app");

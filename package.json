@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "vue": "^3.3.4",
-    "vuetify": "^3.3.6"
+    "vue-router": "^4.2.2",
+    "vuetify": "^3.3.6",
+    "vuex": "^4.1.0",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "@mdi/font": "^7.2.96",
