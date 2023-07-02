@@ -7,7 +7,9 @@ export default {
       showData: false,
       showML: false,
       programming: ["Python", "Javascript", "Java", "C#"],
-      analysis: ['SQL', 'Power BI', 'Tableau', 'RStudio', '']
+      software: ["HTML", "CSS", "Vue", "Firestore", "MongoDB", "Flask"],
+      analysis: ["SQL", "Power BI", "Tableau", "RStudio", "Seaborn", "Pandas"],
+      machine: ["Scikit-Learn", "Tensorflow 2", "Deep Learning"],
     };
   },
 };
@@ -31,7 +33,7 @@ export default {
             cover
           ></v-img>
           <v-card-title class="font-weight-bold">Programming</v-card-title>
-          <v-card-subtitle>Languages and Algorithms</v-card-subtitle>
+          <v-card-subtitle>Programming Languages</v-card-subtitle>
 
           <v-card-actions>
             <v-btn color="orange-lighten-2" variant="text"> Explore </v-btn>
@@ -69,9 +71,9 @@ export default {
         <v-card class="mx-auto" elevation="5">
           <v-img height="200" src="src/assets/images/backend.jpg" cover></v-img>
           <v-card-title class="font-weight-bold"
-            >Backend Development</v-card-title
+            >Software Development</v-card-title
           >
-          <v-card-subtitle>Frameworks</v-card-subtitle>
+          <v-card-subtitle>Frontend and Backend</v-card-subtitle>
 
           <v-card-actions>
             <v-btn color="orange-lighten-2" variant="text"> Explore </v-btn>
@@ -86,12 +88,20 @@ export default {
               <v-divider></v-divider>
 
               <v-card-text>
-                I'm a thing. But, like most politicians, he promised more than
-                he could deliver. You won't have time for sleeping, soldier, not
-                with all the bed making you'll be doing. Then we'll go with that
-                data file! Hey, you add a one and two zeros to that or we walk!
-                You're going to do his laundry? I've got to find a way to
-                escape.
+                <v-list density="compact" lines="1">
+                  <v-list-item
+                    v-for="soft in software"
+                    :title="soft"
+                    variant="text"
+                  >
+                    <template v-slot:prepend
+                      ><v-icon
+                        icon="mdi-check-circle-outline"
+                        color="success"
+                      ></v-icon
+                    ></template>
+                  </v-list-item>
+                </v-list>
               </v-card-text>
             </div>
           </v-expand-transition>
@@ -123,12 +133,20 @@ export default {
               <v-divider></v-divider>
 
               <v-card-text>
-                I'm a thing. But, like most politicians, he promised more than
-                he could deliver. You won't have time for sleeping, soldier, not
-                with all the bed making you'll be doing. Then we'll go with that
-                data file! Hey, you add a one and two zeros to that or we walk!
-                You're going to do his laundry? I've got to find a way to
-                escape.
+                <v-list density="compact" lines="1">
+                  <v-list-item
+                    v-for="viz in analysis"
+                    :title="viz"
+                    variant="text"
+                  >
+                    <template v-slot:prepend
+                      ><v-icon
+                        icon="mdi-check-circle-outline"
+                        color="success"
+                      ></v-icon
+                    ></template>
+                  </v-list-item>
+                </v-list>
               </v-card-text>
             </div>
           </v-expand-transition>
@@ -153,12 +171,16 @@ export default {
               <v-divider></v-divider>
 
               <v-card-text>
-                I'm a thing. But, like most politicians, he promised more than
-                he could deliver. You won't have time for sleeping, soldier, not
-                with all the bed making you'll be doing. Then we'll go with that
-                data file! Hey, you add a one and two zeros to that or we walk!
-                You're going to do his laundry? I've got to find a way to
-                escape.
+                <v-list density="compact" lines="1">
+                  <v-list-item v-for="ml in machine" :title="ml" variant="text">
+                    <template v-slot:prepend
+                      ><v-icon
+                        icon="mdi-check-circle-outline"
+                        color="success"
+                      ></v-icon
+                    ></template>
+                  </v-list-item>
+                </v-list>
               </v-card-text>
             </div>
           </v-expand-transition>
