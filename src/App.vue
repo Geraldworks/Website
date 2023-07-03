@@ -21,6 +21,7 @@ export default {
 
 <template>
   <v-app>
+    <span id="home"></span>
     <NavBar />
     <v-main>
       <v-container class="mx-auto">

@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto w-75">
+  <div class="mx-auto w-75 pt-16 mt-16">
     <div class="text-h5 font-weight-bold text-center">About Me</div>
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. In minus iusto

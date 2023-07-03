@@ -33,8 +33,8 @@ export default {
 </script>
 
 <template>
-  <div style="height: 100vh" class="d-flex align-center">
-    <v-container id="home" class="py-auto">
+  <div style="height: 80vh" class="d-flex align-center">
+    <v-container class="py-auto">
       <v-col class="d-flex justify-center align-top">
         <div class="pr-12 pt-12 intros">
           <div
