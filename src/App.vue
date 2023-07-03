@@ -5,6 +5,7 @@ import About from "@/components/About.vue";
 import Skills from "@/components/Skills.vue";
 import Scroll from "@/components/Scroll.vue";
 import Footer from "@/components/Footer.vue";
+import Leet from "@/components/Leet.vue";
 
 export default {
   components: {
@@ -12,8 +13,8 @@ export default {
     Home,
     About,
     Skills,
-    Scroll,
     Footer,
+    Leet,
   },
 };
 </script>
@@ -23,11 +24,12 @@ export default {
     <NavBar />
     <v-main>
       <v-container class="mx-auto">
+        <!-- <NavBar /> -->
         <v-col>
           <Home />
-          <Scroll />
           <About id="about" />
           <Skills />
+          <Leet />
         </v-col>
       </v-container>
     </v-main>

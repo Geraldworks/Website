@@ -83,7 +83,7 @@ export default {
 
           <v-card-actions>
             <v-btn
-              color="orange-lighten-2"
+              color="orange"
               variant="text"
               @click="showSoftware = true"
             >
@@ -134,7 +134,7 @@ export default {
 
           <v-card-actions>
             <v-btn
-              color="orange-lighten-2"
+              color="orange"
               variant="text"
               @click="showData = true"
             >
