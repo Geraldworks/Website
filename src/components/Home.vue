@@ -1,6 +1,7 @@
 <script>
 import { ref } from "vue";
 import { useElementVisibility } from "@vueuse/core";
+import Scroll from "./Scroll.vue";
 
 export default {
   setup() {
@@ -12,28 +13,48 @@ export default {
       targetIsVisible,
     };
   },
-  watch : {
+  data() {
+    return {
+      showComponents: false,
+    };
+  },
+  watch: {
     targetIsVisible(value) {
-      this.$store.commit('toggleVisibility', value);
-    }
-  }
+      this.$store.commit("toggleVisibility", value);
+      if (!this.showComponents && value) {
+        this.showComponents = true;
+      }
+    },
+  },
+  components: {
+    Scroll,
+  },
 };
 </script>
 
 <template>
-  <v-container id="home">
+  <v-container class="py-auto">
     <v-col class="d-flex justify-center align-top">
-      <div class="pr-12 pt-12">
-        <h1 ref="target" class="text-h3 font-weight-bold">
-          Hi! I'm Gerald! &#128516;
-        </h1>
-        <h3 class="pt-1">Penultimate Year Student @NUS</h3>
-        <p class="pt-4">
-          Creating impact with data, visualisations and machine learning.
-        </p>
-        <p class="font-italic">Oops... video games too...</p>
-        <p class="pt-4"></p>
-        <div class="d-flex justify-start">
+      <div class="pr-12 pt-12 intros">
+        <div
+          :class="{ 'top-down-animation': showComponents }"
+          style="visibility: hidden"
+        >
+          <h1 ref="target" class="text-h3 font-weight-bold">
+            Hi! I'm Gerald! &#128516;
+          </h1>
+          <h3 class="pt-1">Penultimate Year Student @NUS</h3>
+          <p class="pt-4">
+            Creating impact with data, visualisations and machine learning.
+          </p>
+          <p class="font-italic">Oops... video games too...</p>
+          <p class="pt-4"></p>
+        </div>
+        <div
+          class="d-flex justify-start"
+          :class="{ 'bottom-up-animation': showComponents }"
+          style="visibility: hidden"
+        >
           <v-btn
             class="mr-5"
             icon
@@ -43,7 +64,9 @@ export default {
             <v-icon
               icon="mdi-linkedin"
               size="large"
-              :class="{ linkedin: this.$store.state.theme === 'lightTheme' }"
+              :class="{
+                linkedin: this.$store.state.theme === 'lightTheme',
+              }"
             ></v-icon>
           </v-btn>
           <v-btn icon href="https://github.com/Geraldworks" target="_blank">
@@ -56,10 +79,17 @@ export default {
         aspect-ratio="1/1"
         max-width="250"
         src="src/assets/images/me.jpg"
-        class="rounded-circle borders"
+        class="rounded-circle borders intros"
+        :class="{ 'top-down-animation': showComponents }"
+        style="visibility: hidden"
       ></v-img>
     </v-col>
+    <Scroll
+      :class="{ 'fade-in-animation': showComponents }"
+      style="visibility: hidden"
+    />
   </v-container>
+
   <v-expand-transition>
     <v-btn
       v-show="!$store.state.visible"
@@ -73,7 +103,7 @@ export default {
   </v-expand-transition>
 </template>
 
-<style>
+<style scoped>
 .borders {
   border: solid 1px #00004f;
 }
@@ -88,5 +118,69 @@ export default {
   bottom: 7%;
   right: 3%;
   z-index: 1;
+}
+
+.top-down-animation {
+  animation-name: top-down;
+  animation-duration: 1.2s;
+  animation-delay: 0.3s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: relative;
+}
+
+.bottom-up-animation {
+  animation-name: bottom-up;
+  animation-duration: 1.2s;
+  animation-delay: 0.9s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: relative;
+}
+
+.fade-in-animation {
+  animation-name: fade-in;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: relative;
+}
+
+@keyframes top-down {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-up {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 </style>
