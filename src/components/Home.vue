@@ -3,6 +3,10 @@ import { ref } from "vue";
 import { useElementVisibility } from "@vueuse/core";
 import Scroll from "./Scroll.vue";
 
+/*
+When the screen size is smaller than 860, we will modify the home component layout
+*/
+
 export default {
   setup() {
     const target = ref(null);
@@ -29,13 +33,27 @@ export default {
   components: {
     Scroll,
   },
+  computed: {
+    colClassObject() {
+      return {
+        "align-center": this.$vuetify.display.width < 880,
+        "flex-column": this.$vuetify.display.width < 880,
+      };
+    },
+    wordsClassObject() {
+      return {
+        "pr-12": this.$vuetify.display.width >= 880,
+        "pt-12": this.$vuetify.display.width >= 880,
+      };
+    },
+  },
 };
 </script>
 
 <template>
   <v-container class="py-auto">
-    <v-col class="d-flex justify-center align-top">
-      <div class="pr-12 pt-12 intros">
+    <v-col class="d-flex justify-center align-top" :class="colClassObject">
+      <div class="intros" :class="wordsClassObject">
         <div
           :class="{ 'top-down-animation': showComponents }"
           style="visibility: hidden"
@@ -52,7 +70,12 @@ export default {
         </div>
         <div
           class="d-flex justify-start"
-          :class="{ 'bottom-up-animation': showComponents }"
+          :class="{
+            'bottom-up-animation':
+              showComponents && $vuetify.display.width >= 880,  
+            'top-down-animation':
+              showComponents && $vuetify.display.width < 880,
+          }"
           style="visibility: hidden"
         >
           <v-btn
@@ -80,7 +103,10 @@ export default {
         max-width="250"
         src="src/assets/images/me.jpg"
         class="rounded-circle borders intros"
-        :class="{ 'top-down-animation': showComponents }"
+        :class="{
+          'top-down-animation': showComponents,
+          'mt-4': $vuetify.display.width < 880,
+        }"
         style="visibility: hidden"
       ></v-img>
     </v-col>
@@ -148,6 +174,10 @@ export default {
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   position: relative;
+}
+
+.stop-animation {
+  animation: none;
 }
 
 @keyframes top-down {

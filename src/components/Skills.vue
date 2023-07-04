@@ -216,7 +216,7 @@ export default {
 
 <style>
 .card-width {
-  min-width: 350px;
+  min-width: 300px;
   max-width: 450px;
 }
 </style>

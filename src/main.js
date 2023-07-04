@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 
 // Vue Router
-import router from "./route"
+import router from "./route";
 
 // Vuex
 import store from "./store";
@@ -36,6 +36,10 @@ const vuetify = createVuetify({
     themes: {
       lightTheme,
     },
+  },
+  display: {
+    mobileBreakpoint: 650,
+    // can decide to include multiple thresholds in future
   },
 });
 
