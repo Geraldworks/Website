@@ -123,7 +123,8 @@ export default {
 
 <style>
 :root {
-  --timing: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --time: 2s;
+  --timing: cubic-bezier(0.19, 1, 0.22, 1);
 }
 /*
     this.enterAnimation = false;
@@ -132,7 +133,7 @@ export default {
 
 .enterAnimation {
   animation-name: enter;
-  animation-duration: 2.3s;
+  animation-duration: var(--time);
   animation-timing-function: var(--timing);
   animation-fill-mode: forwards;
 }
@@ -159,7 +160,7 @@ export default {
 
 .moveBackwardToLastPosition {
   animation-name: moveBackwardToLast;
-  animation-duration: 2.3s;
+  animation-duration: var(--time);
   animation-timing-function: var(--timing);
   animation-fill-mode: forwards;
 }
@@ -181,7 +182,7 @@ export default {
 
 .moveBackwardToSecondPosition {
   animation-name: moveBackwardToSecond;
-  animation-duration: 2.3s;
+  animation-duration: var(--time);
   animation-timing-function: var(--timing);
   animation-fill-mode: forwards;
 }
@@ -203,7 +204,7 @@ export default {
 
 .moveForwardToSecondPosition {
   animation-name: moveForwardToSecond;
-  animation-duration: 2.3s;
+  animation-duration: var(--time);
   animation-timing-function: var(--timing);
   animation-fill-mode: forwards;
 }
@@ -225,7 +226,7 @@ export default {
 
 .moveForwardToFirstPosition {
   animation-name: moveForwardToFirst;
-  animation-duration: 2.3s;
+  animation-duration: var(--time);
   animation-timing-function: var(--timing);
   animation-fill-mode: forwards;
 }
@@ -247,7 +248,7 @@ export default {
 
 .exitAnimation {
   animation-name: exit;
-  animation-duration: 2.3s;
+  animation-duration: var(--time);
   animation-timing-function: var(--timing);
   animation-fill-mode: forwards;
 }
