@@ -85,7 +85,7 @@ export default {
     class="d-flex justify-center"
   >
     <Card
-      imagePath="/public/learn.jpg"
+      imagePath="/images/learn.jpg"
       header="Hobbies"
       :class="interestCard"
       class="thirdCard"
@@ -93,14 +93,14 @@ export default {
     >
     <Card
       @cardResized="(newValue) => (currHeight = newValue + 20)"
-      imagePath="/public/talking.jpg"
+      imagePath="/images/talking.jpg"
       header="Personality"
       :class="softCard"
       class="secondCard"
       >Soft skills and some additional text</Card
     >
     <Card
-      imagePath="/public/nus.jpg"
+      imagePath="/images/nus.jpg"
       header="Education"
       :class="educationCard"
       class="firstCard"
