@@ -18,8 +18,8 @@ export default {
 
 <template>
   <div class="text-h5 text-center font-weight-bold mt-4 mb-4" id="about">
-    About
+    About Me
     <p class="text-subtitle-2">Interests and Hobbies</p>
   </div>
-  <Flashcards/>
+  <Flashcards />
 </template>

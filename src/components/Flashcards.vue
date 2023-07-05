@@ -28,28 +28,23 @@ export default {
   methods: {
     rotateForwardAndApply() {
       this.cardQueue.forEach((obj) => {
-        obj.enterAnimation = true;
-        obj.exitAnimation = false;
+        obj.enterAnimation = !obj.enterAnimation;
+        obj.exitAnimation = !obj.exitAnimation;
       });
     },
     rotateBackwardAndApply() {
       this.cardQueue.forEach((obj) => {
-        obj.enterAnimation = false;
-        obj.exitAnimation = true;
+        obj.enterAnimation = !obj.enterAnimation;
+        obj.exitAnimation = !obj.exitAnimation;
       });
     },
     showNext() {
       this.rotateForwardAndApply();
-      // apply the css first
       this.cardQueue.push(this.cardQueue.shift());
-      console.log(this.cardQueue[0].name);
-      console.log(this.cardQueue[0]);
     },
     showPrevious() {
       this.rotateBackwardAndApply();
-      // apply the css first
       this.cardQueue.unshift(this.cardQueue.pop());
-      console.log(this.cardQueue[0]);
     },
   },
   watch: {
@@ -70,7 +65,10 @@ export default {
     :style="{ height: currHeight + 'px' }"
     class="d-flex justify-center"
   >
-    <Card @cardResized="(newValue) => currHeight = newValue + 20" imagePath="src/assets/images/talking.jpg"
+    <Card
+      id="that"
+      @cardResized="(newValue) => (currHeight = newValue + 20)"
+      imagePath="src/assets/images/talking.jpg"
       >Soft skills and some additional text</Card
     >
     <Card imagePath="src/assets/images/nus.jpg"
@@ -86,9 +84,29 @@ export default {
 <style>
 .enterAnimation {
   background-color: red;
+  color: blue;
+  animation-name: test;
+  animation-duration: 5s;
 }
 
 .exitAnimation {
   background-color: blue;
+}
+
+@keyframes test {
+  0% {
+    top: 500px;
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+    top: -100px;
+    opacity: 0;
+    z-index: 2;
+  }
+}
+
+#that {
+  color: red;
 }
 </style>

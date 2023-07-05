@@ -17,7 +17,7 @@ export default {
 
 <template>
   <div class="text-h5 text-center font-weight-bold mt-16" id="skills">
-    Technical Skills
+    Technical Skills / Tech Stack
     <p class="text-subtitle-2">Proficiencies and Abilities</p>
   </div>
   <v-container class="mx-auto mt-3">
