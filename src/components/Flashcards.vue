@@ -66,13 +66,16 @@ export default {
     class="d-flex justify-center"
   >
     <Card
-      id="that"
       @cardResized="(newValue) => (currHeight = newValue + 20)"
       imagePath="src/assets/images/talking.jpg"
+      header="Personality"
       >Soft skills and some additional text</Card
     >
-    <Card imagePath="src/assets/images/nus.jpg"
+    <Card imagePath="src/assets/images/nus.jpg" header="Education"
       >Education and some additional text</Card
+    >
+    <Card imagePath="src/assets/images/learn.jpg" header="Hobbies"
+      >Interests and some additional text</Card
     >
   </div>
   <div class="mb-4 d-flex justify-center">
@@ -83,8 +86,6 @@ export default {
 
 <style>
 .enterAnimation {
-  background-color: red;
-  color: blue;
   animation-name: test;
   animation-duration: 5s;
 }
