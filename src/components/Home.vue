@@ -72,7 +72,7 @@ export default {
           class="d-flex justify-start"
           :class="{
             'bottom-up-animation':
-              showComponents && $vuetify.display.width >= 880,  
+              showComponents && $vuetify.display.width >= 880,
             'top-down-animation':
               showComponents && $vuetify.display.width < 880,
           }"
