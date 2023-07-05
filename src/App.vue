@@ -24,7 +24,9 @@ export default {
       <v-container class="mx-auto">
         <v-col>
           <Home />
-          <About id="about" />
+          <v-divider></v-divider>
+          <About />
+          <v-divider></v-divider>
           <Skills />
         </v-col>
       </v-container>

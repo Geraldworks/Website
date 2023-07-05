@@ -17,7 +17,7 @@ export default {
 
 <template>
   <div class="text-h5 text-center font-weight-bold mt-16" id="skills">
-    Skills
+    Technical Skills
     <p class="text-subtitle-2">Proficiencies and Abilities</p>
   </div>
   <v-container class="mx-auto mt-3">
@@ -29,8 +29,8 @@ export default {
         <v-card class="mx-auto" elevation="5">
           <v-img
             height="200"
-            src="src/assets/images/programming.jpg"
             cover
+            src="src/assets/images/programming.jpg"
           ></v-img>
           <v-card-title class="font-weight-bold">Programming</v-card-title>
           <v-card-subtitle>Programming Languages</v-card-subtitle>
@@ -177,11 +177,7 @@ export default {
           <v-card-subtitle>Predictive Analytics</v-card-subtitle>
 
           <v-card-actions>
-            <v-btn
-              color="primary"
-              variant="text"
-              @click="showML = true"
-            >
+            <v-btn color="primary" variant="text" @click="showML = true">
               view skills
             </v-btn>
             <v-spacer></v-spacer>

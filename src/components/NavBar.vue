@@ -65,8 +65,6 @@ export default {
     MobileIcon,
   },
 };
-
-// add an on Toggle Method
 </script>
 
 <template>

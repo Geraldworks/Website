@@ -1,49 +1,25 @@
 <script>
+import Flashcards from "./Flashcards.vue";
+
 export default {
   data() {
-    return {
-      
-    };
+    return {};
   },
   methods: {
     showDisplay() {
       console.log(this.$vuetify.display.width);
-    }
+    },
   },
-  mounted() {
-    console.log(this.$vuetify.display.mobile)
+  components: {
+    Flashcards,
   },
 };
 </script>
 
 <template>
-  <v-container>
-    <div class="mx-auto w-75">
-      <div class="text-h5 font-weight-bold text-center">About Me</div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In minus iusto
-        eos obcaecati ratione molestiae, architecto, distinctio doloremque odit
-        velit veniam mollitia ex! Aspernatur adipisci ab fugit molestias tenetur
-        nisi omnis expedita numquam, saepe laborum nobis soluta reiciendis
-        ratione at repellendus veniam sit vel modi amet culpa maxime eveniet.
-        Nobis corrupti, ipsum nemo non eligendi aliquid? Iure adipisci ipsam
-        tempora commodi accusamus dolores laborum in impedit quasi, repellendus
-        possimus ex voluptate? Voluptatem praesentium eveniet, vel magnam veniam
-        rerum quasi maxime ab ullam necessitatibus tempora hic blanditiis. Ab
-        accusantium autem odit provident corrupti cum illo facere nisi
-        architecto enim, repellendus labore quibusdam perferendis ipsa officia
-        maiores consequuntur sapiente quos culpa voluptas dolore! Repellat ad
-        velit assumenda? Doloribus incidunt ab veritatis ipsa eius, temporibus
-        id nemo sit dolore eligendi asperiores, enim modi voluptatibus
-        aspernatur quo ea fugiat quidem sequi assumenda a, reprehenderit ipsam
-        neque odio doloremque. Tenetur magnam iste exercitationem officia ab
-        nesciunt dolorem voluptatibus architecto aperiam? A dolorem quia
-        tenetur, eaque maxime error quod dicta hic reprehenderit harum
-        voluptatem ullam labore fugit incidunt? Suscipit nostrum, obcaecati
-        debitis quas vero non est reprehenderit libero vitae dicta. Laborum vel,
-        dolores impedit repellendus architecto adipisci totam consequatur quae
-        suscipit, deserunt culpa quibusdam molestiae non?
-      </div>
-    </div>
-  </v-container>
+  <div class="text-h5 text-center font-weight-bold mt-4 mb-4" id="about">
+    About
+    <p class="text-subtitle-2">Interests and Hobbies</p>
+  </div>
+  <Flashcards/>
 </template>
