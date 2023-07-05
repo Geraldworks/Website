@@ -101,7 +101,7 @@ export default {
       <v-img
         aspect-ratio="1/1"
         max-width="250"
-        src="src/assets/images/me.jpg"
+        src="/src/assets/images/me.jpg"
         class="rounded-circle borders intros"
         :class="{
           'top-down-animation': showComponents,
