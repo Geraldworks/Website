@@ -27,11 +27,7 @@ export default {
     >
       <v-col cols="5" class="card-width mr-3">
         <v-card class="mx-auto" elevation="5">
-          <v-img
-            height="200"
-            cover
-            src="/src/assets/images/programming.jpg"
-          ></v-img>
+          <v-img height="200" cover src="/public/programming.jpg"></v-img>
           <v-card-title class="font-weight-bold">Programming</v-card-title>
           <v-card-subtitle>Programming Languages</v-card-subtitle>
 
@@ -75,11 +71,7 @@ export default {
       </v-col>
       <v-col cols="5" class="card-width">
         <v-card class="mx-auto" elevation="5">
-          <v-img
-            height="200"
-            src="/src/assets/images/backend.jpg"
-            cover
-          ></v-img>
+          <v-img height="200" src="/public/backend.jpg" cover></v-img>
           <v-card-title class="font-weight-bold"
             >Software Development</v-card-title
           >
@@ -130,7 +122,7 @@ export default {
     >
       <v-col cols="5" class="card-width mr-3">
         <v-card class="mx-auto" elevation="5">
-          <v-img height="200" src="/src/assets/images/visual.jpg" cover></v-img>
+          <v-img height="200" src="/public/visual.jpg" cover></v-img>
           <v-card-title class="font-weight-bold"
             >Data Analysis & Visualisation</v-card-title
           >
@@ -176,7 +168,7 @@ export default {
       </v-col>
       <v-col cols="5" class="card-width">
         <v-card class="mx-auto" elevation="5">
-          <v-img height="200" src="../assets/images/ml.jpg" cover></v-img>
+          <v-img height="200" src="/public/ml.jpg" cover></v-img>
           <v-card-title class="font-weight-bold">Machine Learning</v-card-title>
           <v-card-subtitle>Predictive Analytics</v-card-subtitle>
 
