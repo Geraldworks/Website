@@ -176,7 +176,7 @@ export default {
       </v-col>
       <v-col cols="5" class="card-width">
         <v-card class="mx-auto" elevation="5">
-          <v-img height="200" src="/src/assets/images/ml.jpg" cover></v-img>
+          <v-img height="200" src="../assets/images/ml.jpg" cover></v-img>
           <v-card-title class="font-weight-bold">Machine Learning</v-card-title>
           <v-card-subtitle>Predictive Analytics</v-card-subtitle>
 
