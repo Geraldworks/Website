@@ -58,11 +58,9 @@ export default {
           :class="{ 'top-down-animation': showComponents }"
           style="visibility: hidden"
         >
-          <h1 ref="target" class="text-h3 font-weight-bold">
-            Hi! I'm Gerald! &#128516;
-          </h1>
+          <h1 class="text-h3 font-weight-bold">Hi! I'm Gerald! &#128516;</h1>
           <h3 class="pt-1">Penultimate Year Student @NUS</h3>
-          <p class="pt-4">
+          <p class="pt-4" ref="target">
             Creating impact with data, visualisations and machine learning.
           </p>
           <p class="font-italic">Oops... video games too...</p>

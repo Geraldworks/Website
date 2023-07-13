@@ -9,7 +9,7 @@ export default {
     const { width: windowWidth, height: windowHeight } = useWindowSize();
     return { el, width, height, windowWidth, windowHeight };
   },
-  props: ["imagePath", "header"],
+  props: ["imagePath", "header", "func", "icon", "buttonText", "buttonIcon"],
   emits: ["cardResized"],
   watch: {
     height(newValue) {
@@ -32,7 +32,7 @@ export default {
     ref="el"
     elevation="5"
     class="d-flex"
-    style="max-height: 330px; position: absolute"
+    style="max-height: 500px; position: absolute; min-height: 300px"
     :width="windowSizeToUse"
     ><v-img
       :src="imagePath"
@@ -41,13 +41,30 @@ export default {
       cover
       v-show="windowWidth >= 650"
     ></v-img
-    ><v-card-text id="c2"
-      ><div class="d-flex justify-center flex-column align-center">
+    ><v-card-text id="c2" style="text-align: center"
+      ><v-icon :icon="icon" size="x-large"></v-icon>
+      <div
+        class="d-flex justify-center flex-column align-center mt-1"
+        style="position: relative"
+      >
         <div class="text-h5">{{ header }}</div>
         <v-divider thickness="6"></v-divider>
-        <slot></slot>
-      </div> </v-card-text
-  ></v-card>
+        <slot style="display: inline"></slot>
+        <div class="mx-auto mt-3">
+          <v-btn
+            v-show="func === undefined"
+            class="text-none text-subtitle-2 font-weight-bold"
+            color="primary"
+            size="small"
+            variant="flat"
+          >
+            <v-icon :icon="buttonIcon"></v-icon>
+            &nbsp; {{ buttonText }}
+          </v-btn>
+        </div>
+      </div>
+    </v-card-text></v-card
+  >
 </template>
 
 <style>

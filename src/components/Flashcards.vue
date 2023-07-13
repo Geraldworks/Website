@@ -89,23 +89,41 @@ export default {
       header="Hobbies"
       :class="interestCard"
       class="thirdCard"
-      >Interests and some additional text</Card
-    >
+      icon="mdi-lightbulb-on"
+      :func="null"
+      >I enjoy playing video games whenever time permits! My favourite games are
+      Elden Ring and Octopath Traveler. I also enjoy learning new tech and
+      skills. Recently, reinforcement learning caught my attention, and I have,
+      on occasions, experimented with it through games in Unity.
+    </Card>
     <Card
-      @cardResized="(newValue) => (currHeight = newValue + 20)"
       imagePath="/images/talking.jpg"
       header="Personality"
       :class="softCard"
       class="secondCard"
-      >Soft skills and some additional text</Card
+      icon="mdi-heart"
+      :func="null"
     >
+      I am a jovial person and I like to crack jokes to lift the mood. I am
+      organised and ambitious when it comes to my work, aiming to complete my
+      tasks to the best of my abilities. If required, I am confident that I can
+      assist my peers and guide them in the right direction whenever they are
+      troubled.
+    </Card>
     <Card
       imagePath="/images/nus.jpg"
       header="Education"
       :class="educationCard"
       class="firstCard"
-      >Education and some additional text</Card
-    >
+      icon="mdi-school"
+      buttonIcon="mdi-tray-arrow-down"
+      buttonText="TBC"
+      @cardResized="(newValue) => (currHeight = newValue + 20)"
+      >I am an undergraduate majoring in Business Analytics. It involves
+      learning descriptive, predictive and prescriptive analytics, while also
+      gaining theoretical and hands-on experience with software development and
+      machine learning.
+    </Card>
   </div>
   <div class="mb-4 d-flex justify-center align-center">
     <v-btn @click="showPrevious" icon="mdi-arrow-left" class="mr-8"></v-btn>
