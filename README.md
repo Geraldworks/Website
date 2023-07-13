@@ -7,9 +7,10 @@ A simple portfolio website, created in Vue with Vuetify
 - [x] Navigation Bar
 - [x] Light Mode & Dark Mode
 - [x] Home Segment
-- [ ] About Segment
+- [x] About Segment
 - [x] Skills Segment
 - [ ] Projects Segment
-- [ ] Contact Segment
-- [ ] Mobile View
-- [ ] Deployment
+- [x] Contact Segment
+- [x] Mobile View
+- [x] Deployment
+- [ ] Favicon
