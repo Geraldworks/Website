@@ -40,7 +40,7 @@ export default {
         {
           title: "Contact",
           icon: "mdi-email-outline",
-          func: this.goToHome,
+          func: this.goToContact,
         },
       ],
     };
@@ -59,6 +59,9 @@ export default {
     },
     goToSkills() {
       this.$router.push("#skills");
+    },
+    goToContact() {
+      this.$router.push("#contact");
     },
   },
   components: {
@@ -96,7 +99,9 @@ export default {
         <v-btn :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
           >Projects</v-btn
         >
-        <v-btn :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
+        <v-btn
+          :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
+          @click="goToContact"
           >Contact</v-btn
         >
       </div>
@@ -112,7 +117,7 @@ export default {
     v-model="drawer"
     location="bottom"
     temporary
-    :width="$vuetify.display.width <= 502 ? 240 : 130"
+    :width="$vuetify.display.width < 502 ? 240 : 130"
   >
     <v-container class="d-flex justify-center flex-wrap align-center">
       <v-col v-for="{ title, icon, func } in items"

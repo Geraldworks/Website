@@ -51,7 +51,7 @@ export default {
 </script>
 
 <template>
-  <v-container class="py-auto">
+  <v-container class="py-auto" id="home">
     <v-col class="d-flex justify-center align-top" :class="colClassObject">
       <div class="intros" :class="wordsClassObject">
         <div

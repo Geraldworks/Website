@@ -8,7 +8,7 @@ export default {
       showML: false,
       programming: ["Python", "Javascript", "Java", "C#"],
       software: ["HTML", "CSS", "Vue", "Firestore", "MongoDB", "Flask"],
-      analysis: ["SQL", "Power BI", "Tableau", "RStudio", "Seaborn", "Pandas"],
+      analysis: ["SQL", "Tableau", "RStudio", "Seaborn", "Pandas"],
       machine: ["Scikit-Learn", "Tensorflow 2", "Deep Learning"],
     };
   },
@@ -16,16 +16,16 @@ export default {
 </script>
 
 <template>
-  <div class="text-h5 text-center font-weight-bold mt-16" id="skills">
+  <div class="text-h5 text-center font-weight-bold mt-4" id="skills">
     Technical Skills / Tech Stack
     <p class="text-subtitle-2">Proficiencies and Abilities</p>
   </div>
-  <v-container class="mx-auto mt-3">
+  <v-container class="mx-auto mb-4">
     <v-row
       class="d-flex flex-wrap justify-center px-auto mx-auto"
       style="max-width: 1100px"
     >
-      <v-col cols="5" class="card-width mr-3">
+      <v-col cols="5" class="card-width mr-2">
         <v-card class="mx-auto" elevation="5">
           <v-img height="200" cover src="/images/programming.jpg"></v-img>
           <v-card-title class="font-weight-bold">Programming</v-card-title>
@@ -69,7 +69,7 @@ export default {
           </v-expand-transition>
         </v-card>
       </v-col>
-      <v-col cols="5" class="card-width">
+      <v-col cols="5" class="card-width ml-2">
         <v-card class="mx-auto" elevation="5">
           <v-img height="200" src="/images/backend.jpg" cover></v-img>
           <v-card-title class="font-weight-bold"
@@ -120,7 +120,7 @@ export default {
       class="d-flex flex-wrap justify-center px-auto mx-auto pt-3"
       style="max-width: 1100px"
     >
-      <v-col cols="5" class="card-width mr-3">
+      <v-col cols="5" class="card-width mr-2">
         <v-card class="mx-auto" elevation="5">
           <v-img height="200" src="/images/visual.jpg" cover></v-img>
           <v-card-title class="font-weight-bold"
@@ -166,7 +166,7 @@ export default {
           </v-expand-transition>
         </v-card>
       </v-col>
-      <v-col cols="5" class="card-width">
+      <v-col cols="5" class="card-width ml-2">
         <v-card class="mx-auto" elevation="5">
           <v-img height="200" src="/images/ml.jpg" cover></v-img>
           <v-card-title class="font-weight-bold">Machine Learning</v-card-title>

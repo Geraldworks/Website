@@ -126,10 +126,6 @@ export default {
   --time: 2s;
   --timing: cubic-bezier(0.19, 1, 0.22, 1);
 }
-/*
-    this.enterAnimation = false;
-    this.moveBackwardToLastPosition = false;
-    this.moveBackwardToSecondPosition = false; */
 
 .enterAnimation {
   animation-name: enter;
@@ -270,7 +266,6 @@ export default {
     z-index: 0;
   }
 }
-/* the bigger the number, the more forward it becomes */
 
 .secondCard {
   top: -15px;
