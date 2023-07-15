@@ -1,16 +1,15 @@
 <script>
 import TimelineItem from "./TimelineItem.vue";
-import { useDisplay } from "vuetify";
 
 export default {
   data() {
     return {
       website: {
-        srcImg: "/images/website_light.png",
+        srcImg: "/images/website.png",
         projectTitle: "Personal Website",
         projectDuration: "June 2023 - July 2023",
         githubLink: "https://github.com/Geraldworks/Website",
-        techStack: ["Vue"],
+        techStack: ["Vue", "Vuetify", "Vuex", "Vue-Router"],
         // personal
       },
       gymmbuddy: {
@@ -19,21 +18,21 @@ export default {
         projectDuration: "Jan 2023 - Apr 2023",
         projectLink: "https://gymmbuddy-3e930.web.app/",
         githubLink: "https://github.com/Geraldworks/BT3103",
-        techStack: ["Vue", "Firestore"],
+        techStack: ["Vue", "Vuex", "Vue-Router", "Firestore"],
         // bt3103
       },
       resumeProcessor: {
-        srcImg: "/images/learn.jpg",
+        srcImg: "/images/rejected.jpg",
         projectTitle: "Fit for the Job?",
         projectDuration: "Jan 2023 - Apr 2023",
-        techStack: ["Vue", "Firestore"],
+        techStack: ["Pandas", "scikit-learn", "Tensorflow 2"],
         // bt4222
       },
       hmm: {
-        srcImg: "/images/learn.jpg",
-        projectTitle: "Hidden Markov Models",
+        srcImg: "/images/hmm.png",
+        projectTitle: "POS Tagging",
         projectDuration: "Jan 2023 - Apr 2023",
-        techStack: [],
+        techStack: ["Python"],
         // bt3102
       },
       analysis: {
@@ -85,6 +84,7 @@ export default {
       their bookings. This project is part of the
       <a
         href="https://nusmods.com/courses/BT3103/application-systems-development-for-business-analytics"
+        target="_blank"
         >BT3103</a
       >
       curriculum which inculcates agile development (scrum) throughout the
@@ -95,19 +95,36 @@ export default {
       debitis excepturi odio ea ipsum illo nobis eos, deleniti enim quae.
     </TimelineItem>
     <TimelineItem v-bind="hmm"
-      >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
-      debitis excepturi odio ea ipsum illo nobis eos, deleniti enim quae.
+      >Part of Speech (POS) Tagging is a common data preprocessing step for
+      Natural Language Processing.
+      <a
+        href="https://nusmods.com/courses/BT3102/computational-methods-for-business-analytics"
+        target="_blank"
+        >BT3102</a
+      >
+      introduces Hidden Markov Models, which has a similar architecture to POS
+      tagging. In this project, we were required to build a POS Tagger from
+      scratch using a twitter dataset. The Viterbi Algorithm and Maximum
+      Likelihood Estimation were used in this project.
     </TimelineItem>
     <TimelineItem v-bind="analysis"
-      >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
-      debitis excepturi odio ea ipsum illo nobis eos, deleniti enim quae.
+      >Using the skills learnt from
+      <a
+        href="https://nusmods.com/archive/BT2103/2022-2023/optimization-methods-in-business-analytics"
+        target="_blank"
+        >BT2103</a
+      >, this project aims to give students hands-on experience with descriptive
+      and predictive analytics. Using the "Default of Credit Card Clients"
+      dataset, we performed data exploration, cleaning and evaluation of five
+      different models to determine the best model that can be used to predict
+      if a client would default on their credit card.
     </TimelineItem>
     <TimelineItem v-bind="orbital">
       RobotInvazion is a simple tower defense games built in Unity with C#. This
       project is part of the
-      <a href="https://orbital.comp.nus.edu.sg/">Orbital</a> programme that
-      gives students the opportunity to pick up software development skills on
-      their own.
+      <a href="https://orbital.comp.nus.edu.sg/" target="_blank">Orbital</a>
+      programme that gives students the opportunity to pick up software
+      development skills on their own.
     </TimelineItem>
     <TimelineItem v-bind="database"
       >As part of our
