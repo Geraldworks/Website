@@ -25,7 +25,8 @@ export default {
         srcImg: "/images/rejected.jpg",
         projectTitle: "Fit for the Job?",
         projectDuration: "Jan 2023 - Apr 2023",
-        techStack: ["Pandas", "scikit-learn", "Tensorflow 2"],
+        githubLink: "https://github.com/Geraldworks/BT4222",
+        techStack: ["Web Scraping", "Pandas", "scikit-learn", "Tensorflow 2"],
         // bt4222
       },
       hmm: {
@@ -91,8 +92,16 @@ export default {
       project.
     </TimelineItem>
     <TimelineItem v-bind="resumeProcessor"
-      >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
-      debitis excepturi odio ea ipsum illo nobis eos, deleniti enim quae.
+      >Finding a job can be very challenging and more often than we realise, our
+      resumes could be a poor fit for the jobs! Leveraging on the technique
+      learnt in
+      <a
+        href="https://nusmods.com/courses/BT4222/mining-web-data-for-business-insights"
+        target="_blank"
+        >BT4222</a
+      >, this project uses various machine learning methods from a web scrapped
+      dataset to train a model that predicts the job category of a resume. This
+      gives end users a good idea if their resume is a good fit for a job.
     </TimelineItem>
     <TimelineItem v-bind="hmm"
       >Part of Speech (POS) Tagging is a common data preprocessing step for
