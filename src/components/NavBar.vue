@@ -14,7 +14,7 @@ export default {
 
   data() {
     return {
-      isDarkMode: true,
+      isDarkMode: this.$store.state.theme === "dark",
       drawer: false,
       items: [
         {
@@ -35,7 +35,7 @@ export default {
         {
           title: "Projects",
           icon: "mdi-laptop",
-          func: this.goToHome,
+          func: this.goToProjects,
         },
         {
           title: "Contact",
@@ -59,6 +59,9 @@ export default {
     },
     goToSkills() {
       this.$router.push("#skills");
+    },
+    goToProjects() {
+      this.$router.push("#projects");
     },
     goToContact() {
       this.$router.push("#contact");
@@ -96,7 +99,9 @@ export default {
           @click="goToSkills"
           >Skills</v-btn
         >
-        <v-btn :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
+        <v-btn
+          :class="{ darkHover: isDarkMode, lightHover: !isDarkMode }"
+          @click="goToProjects"
           >Projects</v-btn
         >
         <v-btn
@@ -117,6 +122,7 @@ export default {
     v-model="drawer"
     location="bottom"
     temporary
+    touchless
     :width="$vuetify.display.width < 502 ? 240 : 130"
   >
     <v-container class="d-flex justify-center flex-wrap align-center">

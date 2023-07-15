@@ -16,7 +16,8 @@ export default {
 </script>
 
 <template>
-  <div class="text-h5 text-center font-weight-bold mt-4" id="skills">
+  <span id="skills"></span>
+  <div class="text-h5 text-center font-weight-bold mt-4">
     Technical Skills / Tech Stack
     <p class="text-subtitle-2">Proficiencies and Abilities</p>
   </div>

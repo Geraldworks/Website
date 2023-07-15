@@ -13,4 +13,4 @@ A simple portfolio website, created in Vue with Vuetify
 - [x] Contact Segment
 - [x] Mobile View
 - [x] Deployment
-- [ ] Favicon
+- [x] Favicon
