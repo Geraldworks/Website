@@ -26,7 +26,7 @@ export default {
       class="d-flex flex-wrap justify-center px-auto mx-auto"
       style="max-width: 1100px"
     >
-      <v-col cols="5" class="card-width mr-2">
+      <v-col cols="5" class="card-width">
         <v-card class="mx-auto" elevation="5">
           <v-img height="200" cover src="/images/programming.jpg"></v-img>
           <v-card-title class="font-weight-bold">Programming</v-card-title>
@@ -70,7 +70,7 @@ export default {
           </v-expand-transition>
         </v-card>
       </v-col>
-      <v-col cols="5" class="card-width ml-2">
+      <v-col cols="5" class="card-width">
         <v-card class="mx-auto" elevation="5">
           <v-img height="200" src="/images/backend.jpg" cover></v-img>
           <v-card-title class="font-weight-bold"
@@ -118,10 +118,10 @@ export default {
       </v-col>
     </v-row>
     <v-row
-      class="d-flex flex-wrap justify-center px-auto mx-auto pt-3"
+      class="d-flex flex-wrap justify-center px-auto mx-auto"
       style="max-width: 1100px"
     >
-      <v-col cols="5" class="card-width mr-2">
+      <v-col cols="5" class="card-width">
         <v-card class="mx-auto" elevation="5">
           <v-img height="200" src="/images/visual.jpg" cover></v-img>
           <v-card-title class="font-weight-bold"
@@ -167,7 +167,7 @@ export default {
           </v-expand-transition>
         </v-card>
       </v-col>
-      <v-col cols="5" class="card-width ml-2">
+      <v-col cols="5" class="card-width">
         <v-card class="mx-auto" elevation="5">
           <v-img height="200" src="/images/ml.jpg" cover></v-img>
           <v-card-title class="font-weight-bold">Machine Learning</v-card-title>

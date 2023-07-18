@@ -1,12 +1,5 @@
 <script>
-import { ref } from "vue";
-import { useElementSize } from "@vueuse/core";
 export default {
-  setup() {
-    const el = ref(null);
-    const { width, height } = useElementSize(el);
-    return { el, width, height };
-  },
   props: [
     "srcImg",
     "projectTitle",
@@ -31,7 +24,8 @@ export default {
   <v-timeline-item
     :dot-color="this.$store.state.theme === 'dark' ? '#ffb74d' : '#6200ee'"
   >
-    <v-card ref="el" max-width="450">
+    <v-card ref="el" max-width="300">
+      <v-img :src="srcImg" cover></v-img>
       <v-card-title class="font-weight-bold">{{ projectTitle }}</v-card-title>
       <v-card-subtitle class="font-italic">{{
         projectDuration
@@ -65,16 +59,5 @@ export default {
         ></v-btn
       ></v-card-text>
     </v-card>
-    <template v-slot:opposite>
-      <div>
-        <img
-          :src="srcImg"
-          :height="180"
-          :width="180"
-          style="object-fit: cover; border: 1px solid black"
-        />
-      </div>
-    </template>
-    <v-spacer></v-spacer>
   </v-timeline-item>
 </template>

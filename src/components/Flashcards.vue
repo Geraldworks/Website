@@ -118,6 +118,7 @@ export default {
       icon="mdi-school"
       buttonIcon="mdi-tray-arrow-down"
       buttonText="TBC"
+      :func="null"
       @cardResized="(newValue) => (currHeight = newValue + 20)"
       >I am an undergraduate majoring in Business Analytics. It involves
       learning descriptive, predictive and prescriptive analytics, while also
