@@ -5,7 +5,7 @@ import projectInfo from "./projectInfo";
 export default {
   data() {
     return {
-      ...projectInfo
+      ...projectInfo,
     };
   },
   components: {
@@ -15,7 +15,12 @@ export default {
 </script>
 
 <template>
-  <v-timeline side="end">
+  <v-timeline
+    align="center"
+    side="end"
+    :density="$vuetify.display.width > 425 ? 'default' : 'compact'"
+    class="mb-4"
+  >
     <MobileTimelineItem v-bind="website">
       A simple website to share information about myself and keep track of my
       skillsets and projects.
@@ -92,3 +97,9 @@ export default {
     </MobileTimelineItem>
   </v-timeline>
 </template>
+
+<style>
+a {
+  color: #d0adf0;
+}
+</style>

@@ -23,8 +23,8 @@ export default {
 <template>
   <v-timeline-item
     :dot-color="this.$store.state.theme === 'dark' ? '#ffb74d' : '#6200ee'"
-  >
-    <v-card ref="el" max-width="300">
+  > 
+    <v-card ref="el" max-width="320">
       <v-img :src="srcImg" cover></v-img>
       <v-card-title class="font-weight-bold">{{ projectTitle }}</v-card-title>
       <v-card-subtitle class="font-italic">{{

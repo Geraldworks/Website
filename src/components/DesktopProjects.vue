@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <v-timeline density="default" justify-center class="mb-4">
+  <v-timeline justify-center class="mb-4">
     <TimelineItem v-bind="website">
       A simple website to share information about myself and keep track of my
       skillsets and projects.
