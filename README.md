@@ -9,7 +9,7 @@ A simple portfolio website, created in Vue with Vuetify
 - [x] Home Segment
 - [x] About Segment
 - [x] Skills Segment
-- [ ] Projects Segment
+- [x] Projects Segment
 - [x] Contact Segment
 - [x] Mobile View
 - [x] Deployment
