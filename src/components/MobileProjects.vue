@@ -13,7 +13,7 @@ export default {
   },
   computed: {
     anchorColor() {
-      return this.$store.state.theme === "dark" ? "#d0adf0" : "551a8b";
+      return this.$store.state.theme === "dark" ? "#d0adf0" : "#551a8b";
     },
   },
 };
@@ -39,7 +39,7 @@ export default {
       <a
         href="https://nusmods.com/courses/BT3103/application-systems-development-for-business-analytics"
         target="_blank"
-        :style="anchorColor"
+        :style="{ color: anchorColor }"
         >BT3103</a
       >
       curriculum which inculcates agile development (scrum) throughout the
@@ -52,7 +52,7 @@ export default {
       <a
         href="https://nusmods.com/courses/BT4222/mining-web-data-for-business-insights"
         target="_blank"
-        :style="anchorColor"
+        :style="{ color: anchorColor }"
         >BT4222</a
       >, this project uses various machine learning methods from a web scrapped
       dataset to train a model that predicts the job category of a resume. This
@@ -64,7 +64,7 @@ export default {
       <a
         href="https://nusmods.com/courses/BT3102/computational-methods-for-business-analytics"
         target="_blank"
-        :style="anchorColor"
+        :style="{ color: anchorColor }"
         >BT3102</a
       >
       introduces Hidden Markov Models, which has a similar architecture to POS
@@ -77,7 +77,7 @@ export default {
       <a
         href="https://nusmods.com/archive/BT2103/2022-2023/optimization-methods-in-business-analytics"
         target="_blank"
-        :style="anchorColor"
+        :style="{ color: anchorColor }"
         >BT2103</a
       >, this project aims to give students hands-on experience with descriptive
       and predictive analytics. Using the "Default of Credit Card Clients"
@@ -91,7 +91,7 @@ export default {
       <a
         href="https://orbital.comp.nus.edu.sg/"
         target="_blank"
-        :style="anchorColor"
+        :style="{ color: anchorColor }"
         >Orbital</a
       >
       programme that gives students the opportunity to pick up software
@@ -102,7 +102,7 @@ export default {
       <a
         href="https://nusmods.com/courses/BT2102/data-management-and-visualisation"
         target="_blank"
-        :style="anchorColor"
+        :style="{ color: anchorColor }"
         >BT2102</a
       >
       assignment, we were tasked to implement a library management system to
