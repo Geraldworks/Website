@@ -28,6 +28,7 @@ export default {
     srcImg: "/images/hmm.png",
     projectTitle: "POS Tagger",
     projectDuration: "Jan 2023 - Apr 2023",
+    githubLink: "https://github.com/Geraldworks/POS-Tagger/",
     techStack: ["Python"],
     // bt3102
   },
