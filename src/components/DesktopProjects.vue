@@ -21,7 +21,7 @@ export default {
       skillsets and projects.
     </TimelineItem>
     <TimelineItem v-bind="gymmbuddy"
-      >GymmBuddy is an interactive fitness management application for both
+      >GYMMBUDDY is an interactive fitness management application for both
       trainers and clients. Clients can create accounts to monitor their fitness
       progress, make personal trainer bookings and configure their fitness
       routines. Trainers on the other hand will be able to manage clients and

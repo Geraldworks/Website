@@ -9,7 +9,7 @@ export default {
   },
   gymmbuddy: {
     srcImg: "/images/gymmbuddy.png",
-    projectTitle: "GymmBuddy",
+    projectTitle: "GYMMBUDDY",
     projectDuration: "Jan 2023 - Apr 2023",
     projectLink: "https://gymmbuddy-3e930.web.app/",
     githubLink: "https://github.com/Geraldworks/BT3103",
@@ -26,7 +26,7 @@ export default {
   },
   hmm: {
     srcImg: "/images/hmm.png",
-    projectTitle: "POS Tagging",
+    projectTitle: "POS Tagger",
     projectDuration: "Jan 2023 - Apr 2023",
     techStack: ["Python"],
     // bt3102
