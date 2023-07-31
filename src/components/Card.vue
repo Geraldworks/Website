@@ -9,7 +9,7 @@ export default {
     const { width: windowWidth, height: windowHeight } = useWindowSize();
     return { el, width, height, windowWidth, windowHeight };
   },
-  props: ["imagePath", "header", "func", "icon", "buttonText", "buttonIcon"],
+  props: ["imagePath", "header", "show", "icon", "buttonText", "buttonIcon"],
   emits: ["cardResized"],
   watch: {
     height(newValue) {
@@ -52,11 +52,13 @@ export default {
         <slot style="display: inline"></slot>
         <div class="mx-auto mt-3">
           <v-btn
-            v-show="func === undefined"
+            v-show="show"
             class="text-none text-subtitle-2 font-weight-bold"
             color="primary"
             size="small"
             variant="flat"
+            download 
+            href="/gerald_resume.pdf"
           >
             <v-icon :icon="buttonIcon"></v-icon>
             &nbsp; {{ buttonText }}

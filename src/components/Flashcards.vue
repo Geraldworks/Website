@@ -90,7 +90,6 @@ export default {
       :class="interestCard"
       class="thirdCard"
       icon="mdi-lightbulb-on"
-      :func="null"
       >I enjoy playing video games whenever time permits! My favourite games are
       Elden Ring and Octopath Traveler. I also enjoy learning new tech and
       skills. Recently, reinforcement learning caught my attention, and I have,
@@ -102,7 +101,6 @@ export default {
       :class="softCard"
       class="secondCard"
       icon="mdi-heart"
-      :func="null"
     >
       I am a jovial person and I like to crack jokes to lift the mood. I am
       organised and ambitious when it comes to my work, aiming to complete my
@@ -117,8 +115,8 @@ export default {
       class="firstCard"
       icon="mdi-school"
       buttonIcon="mdi-tray-arrow-down"
-      buttonText="TBC"
-      :func="null"
+      buttonText="Resume"
+      :show="true"
       @cardResized="(newValue) => (currHeight = newValue + 20)"
       >I am an undergraduate majoring in Business Analytics. It involves
       learning descriptive, predictive and prescriptive analytics, while also
