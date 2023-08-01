@@ -7,7 +7,7 @@ export default {
       showData: false,
       showML: false,
       programming: ["Python", "Javascript", "Java", "C#"],
-      software: ["HTML", "CSS", "Vue", "Firestore", "MongoDB", "Flask"],
+      software: ["HTML", "CSS", "Vue", "Firestore", "MongoDB", "Django"],
       analysis: ["SQL", "Tableau", "RStudio", "Seaborn", "Pandas"],
       machine: ["Scikit-Learn", "Tensorflow 2", "Deep Learning"],
     };
