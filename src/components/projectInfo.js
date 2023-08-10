@@ -4,7 +4,7 @@ export default {
     projectTitle: "Personal Website",
     projectDuration: "June 2023 - July 2023",
     githubLink: "https://github.com/Geraldworks/Website",
-    techStack: ["Vue", "Vuetify", "Vuex", "Vue-Router"],
+    techStack: ["HTML", "CSS", "JavaScript", "Vue.js", "Vuetify", "Vuex", "Vue-Router"],
     // personal
   },
   gymmbuddy: {
@@ -13,7 +13,7 @@ export default {
     projectDuration: "Jan 2023 - Apr 2023",
     projectLink: "https://gymmbuddy-3e930.web.app/",
     githubLink: "https://github.com/Geraldworks/BT3103",
-    techStack: ["Vue", "Vuex", "Vue-Router", "Firebase"],
+    techStack: ["HTML", "CSS", "JavaScript", "Vue.js", "Vuex", "Vue-Router", "Firebase"],
     // bt3103
   },
   resumeProcessor: {
@@ -21,7 +21,7 @@ export default {
     projectTitle: "Fit for the Job?",
     projectDuration: "Jan 2023 - Apr 2023",
     githubLink: "https://github.com/Geraldworks/BT4222",
-    techStack: ["Selenium", "Pandas", "Seaborn", "scikit-learn", "Tensorflow"],
+    techStack: ["Python", "Selenium", "Pandas", "Seaborn", "scikit-learn", "Tensorflow"],
     // bt4222
   },
   hmm: {
@@ -39,7 +39,7 @@ export default {
     projectLink:
       "https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset",
     githubLink: "https://github.com/Geraldworks/BT2103",
-    techStack: ["Pandas", "Seaborn", "scikit-learn", "Tensorflow"],
+    techStack: ["Python", "Pandas", "Seaborn", "scikit-learn", "Tensorflow"],
     // bt2103
   },
   orbital: {
@@ -56,7 +56,7 @@ export default {
     projectTitle: "Library System",
     projectDuration: "Jan 2022 - Apr 2022",
     githubLink: "https://github.com/Geraldworks/BT2102",
-    techStack: ["MySQL", "tkinter"],
+    techStack: ["Python", "MySQL", "tkinter"],
     // bt2102
   },
 };
